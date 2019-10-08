@@ -1,0 +1,323 @@
+.topnav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	height: 50px;
+	background-image: linear-gradient(#5b5b5b, #afaeae);
+	border-style: solid solid solid none;
+	border-right-color: #828282;
+	border-bottom-color: #828282;
+	border-top-color: #828282;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-width: 500px;
+	overflow-y: visible;
+	z-index: 2;
+}
+
+.navlink {
+	display: inline;
+	vertical-align: top;
+	font-family: Arial, sans-serif, serif;
+}
+
+.navbutton {
+	background-image: linear-gradient(#5b5b5b, #afaeae);
+	font-size: 16pt;
+	display: block;
+	height: 100%;
+	padding: 0px 30px;
+	color: #dbdbdb;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.navbutton:hover {
+	text-decoration: underline;
+	text-decoration-color: #dfdfdf;
+}
+
+.navbutton span {
+	position: relative;
+	top: 8pt;
+}
+
+.logo {
+	background-image: linear-gradient(#5b5b5b, #afaeae);
+	height: 111.4px;
+	width: 196px;
+	float: left;
+	border-style: none solid solid solid;
+	border-right-color: #828282;
+	border-left-color: #828282;
+	border-bottom-color: #828282;
+	z-index: 2;
+}
+
+.predict {
+	float: left;
+	width: 90px;
+	border-right-style: solid;
+	border-right-color: #828282;
+	text-align: center;
+}
+
+.archive {
+	float: left;
+	width: 90px;
+	border-right-style: solid;
+	border-right-color: #828282;
+	text-align: center;
+}
+
+.signup {
+	float: right;
+	width: 90px;
+	border-left-style: solid;
+	border-right-style: solid;
+	border-left-color: #828282;
+	border-right-color: #828282;
+	text-align: center;
+}
+
+.login {
+	float: right;
+	width: 90px;
+	border-left-style: solid;
+	border-left-color: #828282;
+	text-align: center;	
+}
+
+.predict-drop {
+	position: relative;
+	display: inline-block;
+}
+
+.archive-drop {
+	position: relative;
+	display: inline-block;
+}
+
+.predict-drop-content {
+	display: none;
+	position: absolute;
+	top: 6.34vh;
+	left: -.15vw;
+	background-image: linear-gradient(#afaeae, #5b5b5b, #afaeae);
+	width: 150%;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	border-style: solid solid solid solid;
+	border-color: #828282;
+}
+
+.archive-drop-content {
+	display: none;
+	position: absolute;
+	top: 6.34vh;
+	left: -.45vw;
+	background-image: linear-gradient(#afaeae, #5b5b5b, #afaeae);
+	width: 150%;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	border-style: solid solid solid solid;
+	border-color: #828282;
+}
+
+.predict-drop-content a {
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 2vh;
+}
+
+.archive-drop-content a {
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 2vh;
+}
+
+.predict-drop-content div:hover p {
+	text-decoration: underline;
+}
+
+.archive-drop-content div:hover p {
+	text-decoration: underline;
+}
+
+.predict-new {
+	position: relative;
+	top: -2vh;
+	width: 100%;
+	color: #dbdbdb;
+	vertical-align: center;
+	border-bottom-style: solid;
+	border-bottom-color: #828282;
+}
+
+.predict-new-text {
+	padding-top: 1.4vh;
+	padding-left: 1.1vw;
+}
+
+.archive-new {
+	position: relative;
+	top: -2vh;
+	width: 100%;
+	vertical-align: center;
+	color: #dbdbdb;
+	border-bottom-style: solid;
+	border-bottom-color: #828282;
+}
+
+.archive-new-text {
+	padding-top: 1.4vh;
+	padding-left: 1.1vw;
+}
+
+.predict-res {
+	position: relative;
+	top:-4vh;
+	width: 100%;
+	color: #dbdbdb;
+	height: 2vh;
+}
+
+.predict-res-text {
+	padding-left: 1.1vw;
+	padding-top: 1.8vh;
+}
+
+.archive-res {
+	position: relative;
+	top: -4vh;
+	width: 100%;
+	color: #dbdbdb;
+	height: 2vh;
+}
+
+.archive-res-text {
+	padding-left: 1.1vw;
+	padding-top: 1.8vh;
+}
+
+.predict-drop:hover .predict-drop-content {
+	display: block;
+}
+
+.archive-drop:hover .archive-drop-content{
+	display: block;
+}
+
+.sidebar-left a {
+    text-decoration: none;
+}
+
+.about-button {
+    width: 100%;
+    position: relative;
+    background-color: rgba(132, 149, 180, 0.801);
+    top: 108px;
+    height: 70px;
+    border-style: solid solid solid none;
+    border-color: #888888;
+    border-width: 2px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.about-button:hover {
+    background-color: rgb(195, 205, 223);
+}
+
+.about-button span {
+    display: block;
+    position: relative;
+    margin-top: 19.08px;
+    font-size: 18pt;
+    color: #000000af;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contact-button {
+    width: 100%;
+    position: relative;
+    background-color: rgba(132, 149, 180, 0.801);
+    top: 107px;
+    height: 70px;
+    border-style: solid solid solid none;
+    border-color: #888888;
+    border-width: 2px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.contact-button:hover {
+    background-color: rgb(195, 205, 223);
+}
+
+.contact-button span {
+    display: block;
+    position: relative;
+    margin-top: 19.08px;
+    font-size: 18pt;
+    color: #000000af;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.privacy-button {
+    width: 100%;
+    position: relative;
+    background-color: rgba(132, 149, 180, 0.801);
+    top: 106px;
+    height: 95px;
+    border-style: solid solid solid none;
+    border-color: #888888;
+    border-width: 2px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.privacy-button:hover {
+    background-color: rgb(195, 205, 223);
+}
+
+.privacy-button span {
+    display: block;
+    position: relative;
+    margin-top: 19.08px;
+    font-size: 18pt;
+    color: #000000af;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.dev-diary-button {
+    width: 100%;
+    position: relative;
+    background-color: rgba(132, 149, 180, 0.801);
+    top: 105px;
+    height: 95px;
+    border-style: solid solid solid none;
+    border-color: #888888;
+    border-width: 2px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dev-diary-button:hover {
+    background-color: rgb(195, 205, 223);
+}
+
+.dev-diary-button span {
+    display: block;
+    position: relative;
+    margin-top: 19.08px;
+    font-size: 18pt;
+    color: #000000af;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

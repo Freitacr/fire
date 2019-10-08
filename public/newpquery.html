@@ -1,0 +1,101 @@
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148998020-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-148998020-1');
+	</script>
+	<link rel="stylesheet" href="navbar.css"/>
+	<link rel="stylesheet" href="newpquery.css"/>
+    <script src="newpquery.js"></script>
+    <link rel="shortcut icon" href="OMIS Logo.ico" type="image/x-icon"/>
+</head>
+<body>
+	<ul class="topnav" id="topnav">
+		<li class="navlink">
+			<a href = "index.html">
+				<img class="logo" src="OMIS Logo.jpg" alt="OMIS Logo"/>
+			</a>
+		</li>
+		<li class="navlink predict-drop">
+			<a class="predict navbutton" href="newpquery.html" id="pnavbutton"><span>Predict</span></a>
+			<div class="predict-drop-content">
+				<a href="newpquery.html">
+					<div class="predict-new">
+						<p class="predict-new-text" id="predict-new-text">New Query</p>
+					</div>
+				</a>
+				<a href="#pres">
+					<div class="predict-res">
+						<p class="predict-res-text">Resume Query</p>
+					</div>
+				</a>
+			</div>
+		</li>
+		<li class="navlink archive-drop">
+			<a href="newaquery.html" class="archive navbutton" id="anavbutton"><span>Archive</span></a>
+			<div class="archive-drop-content">
+				<a href="newaquery.html">
+					<div class="archive-new">
+						<p class="archive-new-text">New Query</p>
+					</div>
+				</a>
+				<a href="#ares">
+					<div class="archive-res">
+						<p class="archive-res-text">Resume Query</p>
+					</div>
+				</a>
+			</div>
+		</li>
+		<li class="navlink"><a href="#signup" class="signup navbutton"><span>Sign Up</span></a></li>
+		<li class="navlink"><a href="#login" class="login navbutton"><span>Log In</span></a></li>
+	</ul>
+	<div class="sidebar-left">
+		<a href="about.html">
+				<div class="about-button">
+					<span>About</span>  
+				</div>
+			</a>
+			<a href="about.html#contact">
+				<div class="contact-button">
+					<span>Contact Us</span>
+				</div>
+			</a>
+			<a href="privacy.html">
+				<div class="privacy-button">
+					<span>Privacy<br>Policy</span>
+				</div>
+			</a>
+			<a href="devdiary.html">
+				<div class="dev-diary-button">
+					<span>Development<br>Diary</span>
+				</div>
+			</a>
+	</div>
+	<div class="sidebar-right">
+    </div>
+    <div class="centre-space">
+        <div class="query-title">
+            <p class="query-title-text">New Query</p>
+        </div>
+        <form class="make-form">
+            <p class="make-text"><span class="make-text-align">Make</span> <input type="text" name="make" class="make-text-form" id="make-text-form"> </p>
+        </form>
+        <form class="model-form">
+            <p class="model-text"><span class="model-text-align">Model</span> <input type="text" name="model" class="model-text-form" id="model-text-form"> </p>
+        </form>
+        <form class="year-form">
+            <p class="year-text"><span class="year-text-align">Year</span> <input type="text" name="year" class="year-text-form" id="year-text-form"> </p>
+        </form>
+        <form class="jobid-form">
+            <p class="jobid-text"><span class="jobid-text-align">Job ID</span> <input type="text" name="jobid" class="jobid-text-form" id="jobid-text-form"> </p>
+        </form>
+        <form class="complaint-form">
+            <p class="complaint-text"><span class="complaint-text-align">Complaint</span> <textarea rows=3 cols=60 name= "complaint-text-form" class="complaint-text-form" id="complaint-text-form"></textarea> </p>
+        </form>
+        <button class="query-button" value="submit" type="button" id="submitbutton">Search</button>
+    </div>
+</body>

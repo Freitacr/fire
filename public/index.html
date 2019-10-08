@@ -1,0 +1,138 @@
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148998020-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-148998020-1');
+	</script>
+	<link rel="stylesheet" href="navbar.css"/>
+	<link rel="stylesheet" href="index.css"/>
+	<link rel="shortcut icon" href="OMIS Logo.ico" type="image/x-icon"/>
+</head>
+<body>
+	<ul class="topnav">
+		<li class="navlink">
+			<a href = "index.html">
+				<img class="logo" src="OMIS Logo.jpg" alt="OMIS Logo"/>
+			</a>
+		</li>
+		<li class="navlink predict-drop">
+			<a class="predict navbutton" href="newpquery.html"><span>Predict</span></a>
+			<div class="predict-drop-content">
+				<a href="newpquery.html">
+					<div class="predict-new">
+						<p class="predict-new-text">New Query</p>
+					</div>
+				</a>
+				<a href="#pres">
+					<div class="predict-res">
+						<p class="predict-res-text">Resume Query</p>
+					</div>
+				</a>
+			</div>
+		</li>
+		<li class="navlink archive-drop">
+			<a href="newaquery.html" class="archive navbutton"><span>Archive</span></a>
+			<div class="archive-drop-content">
+				<a href="newaquery.html">
+					<div class="archive-new">
+						<p class="archive-new-text">New Query</p>
+					</div>
+				</a>
+				<a href="#ares">
+					<div class="archive-res">
+						<p class="archive-res-text">Resume Query</p>
+					</div>
+				</a>
+			</div>
+		</li>
+		<li class="navlink"><a href="#signup" class="signup navbutton"><span>Sign Up</span></a></li>
+		<li class="navlink"><a href="#login" class="login navbutton"><span>Log In</span></a></li>
+	</ul>
+	<div class="sidebar-left">
+		<a href="about.html">
+			<div class="about-button">
+				<span>About</span>  
+			</div>
+		</a>
+		<a href="about.html#contact">
+			<div class="contact-button">
+				<span>Contact Us</span>
+			</div>
+		</a>
+		<a href="privacy.html">
+			<div class="privacy-button">
+				<span>Privacy<br>Policy</span>
+			</div>
+		</a>
+		<a href="devdiary.html">
+			<div class="dev-diary-button">
+				<span>Development<br>Diary</span>
+			</div>
+		</a>
+	</div>
+	<div class="sidebar-right">
+
+	</div>
+	<section class="centre-stage">
+		<div class="centre-space">
+			<div class="predict-section">
+				<div class="predict-blurb">
+					<h1>Prediction</h1>
+					<h3>Troubleshooting. Faster.</h3>
+				</div>
+				<div class="predict-info">
+					<h1>explanation</h1>
+					<p>This will soon become an explanation of how to use this feature.</p>
+				</div>
+			</div>
+			<div class="archive-section">
+				<div class="archive-info">
+					<h1>explanation</h1>
+					<p>This will soon become an explanation of how to use this feature.</p>
+				</div>
+				<div class="archive-blurb">
+					<h1>The Archive</h1>
+					<h3>Can't remember thousands of jobs?<br>We can.</h3>
+				</div>
+			</div>
+			<div class="forum-section">
+				<div class="forum-blurb">
+					<h1>The Forums</h1>
+					<h3>Job specific information sharing</h3>
+				</div>
+				<div class="forum-info">
+					<h1>explanation</h1>
+					<p>This will soon become an explanation of how to use this feature.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!--Firebase required Code-->
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-analytics.js"></script>
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+		apiKey: "AIzaSyBbgUmmFAUGmwKu69ZEB7O3bSVpH2nWHIk",
+		authDomain: "oldmanintheshop.firebaseapp.com",
+		databaseURL: "https://oldmanintheshop.firebaseio.com",
+		projectId: "oldmanintheshop",
+		storageBucket: "",
+		messagingSenderId: "281846231834",
+		appId: "1:281846231834:web:b701993bbb4273dd9eb2a3",
+		measurementId: "G-6R2QC2EDH9"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		firebase.analytics();
+	</script>
+</body>

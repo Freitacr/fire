@@ -1,0 +1,224 @@
+.query-title {
+	margin: auto;
+	position: relative;
+	display: block;
+	text-align: center;
+	top: 14vh;
+	width: 400px;
+	height: 116.865px;
+	z-index: -1;
+}
+
+.query-title-text {
+	position: relative;
+	margin: auto;
+	display: block;
+	font-size: 8vh;
+	font-weight: bold;
+	z-index: -1;
+	text-shadow: 0px 4px 4px rgba(0,0,0,0.5);
+}
+
+body {
+	background-color: #99aadd;
+}
+
+.make-form {
+	margin: auto;
+	position: relative;
+	top: 12vh;
+	min-width: 420px;
+	width: 45vw;
+}
+
+.make-text {
+	font-size: 4.8vh;
+	display: block;
+}
+
+.make-text-align {
+	display: inline-block;
+	min-width: 175px;
+	width: 15vw;
+	text-align: right;
+}
+
+.make-text-form {
+	position: relative;
+	height: 5.55vh;
+	min-width: 233.1px;
+	width: 25vw;
+	float: right;
+	font-size: 3vh;
+	box-shadow: 2px 1px 8px rgba(30,90,192,0.5);
+}
+
+.model-form {
+	margin: auto;
+	position: relative;
+	top: 9vh;
+	min-width: 420px;
+	width: 45vw;
+}
+
+.model-text {
+	font-size: 4.8vh;
+	display: block;
+}
+
+.model-text-align {
+	display: inline-block;
+	min-width: 175px;
+	width: 15vw;
+	text-align: right;
+}
+
+.model-text-form {
+	position: relative;
+	height: 5.55vh;
+	width: 25vw;
+	float: right;
+	min-width: 233.1px;
+	font-size: 3vh;
+	box-shadow: 2px 1px 8px rgba(30,90,192,0.5);
+}
+
+.year-form {
+	position: relative;
+	margin: auto;
+	top: 6vh;
+	min-width: 420px;
+	width: 45vw;
+}
+
+.year-text {
+	font-size: 4.8vh;
+	display: block;
+}
+
+.year-text-align {
+	display: inline-block;
+	min-width: 175px;
+	width: 15vw;
+	text-align: right;
+}
+
+.year-text-form {
+	position: relative;
+	display: block;
+	float: right;
+	height: 5.55vh;
+	width: 25vw;
+	min-width: 233.1px;
+	font-size: 3vh;
+	box-shadow: 2px 1px 8px rgba(30,90,192,0.5);
+}
+
+.jobid-form {
+    position: relative;
+	margin: auto;
+	top: 3vh;
+	min-width: 420px;
+	width: 45vw;
+}
+
+.jobid-text {
+	font-size: 4.8vh;
+	display: block;
+}
+
+.jobid-text-align {
+	display: inline-block;
+	min-width: 175px;
+	width: 15vw;
+	text-align: right;
+}
+
+.jobid-text-form {
+	position: relative;
+	display: block;
+	float: right;
+	height: 5.55vh;
+	width: 25vw;
+	min-width: 233.1px;
+	font-size: 3vh;
+	box-shadow: 2px 1px 8px rgba(30,90,192,0.5);
+}
+
+.complaint-form {
+    position: relative;
+	margin: auto;
+	top: 1vh;
+	min-width: 420px;
+	width: 45vw;
+}
+
+.complaint-text {
+	font-size: 4.8vh;
+	display: block;
+}
+
+.complaint-text-align {
+	display: inline-block;
+	min-width: 175px;
+	width: 15vw;
+	text-align: right;
+}
+
+.complaint-text-form {
+	position: relative;
+	display: block;
+    float: right;
+    resize: none;
+    text-align: left;
+	height: 10vh;
+	width: 25vw;
+	min-width: 233.1px;
+	font-size: 3vh;
+	box-shadow: 2px 1px 8px rgba(30,90,192,0.5);
+}
+
+.align-colon {
+	position: relative;
+	display: block;
+	float: right;
+}
+
+.query-button {
+	margin: auto;
+	position: relative;
+	display: block;
+	top: 10vh;
+	width: 24.1vw;
+	min-width: 400px;
+	height: 10vh;
+	border-radius: 1.5vw;
+	font-size: 5vh;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	border-style: solid;
+	border-color: #525252;
+}
+
+.sidebar-left {
+	display: block;
+	min-width: 200px;
+	left: 0vw;
+	height: 100%;
+	box-shadow: 0px 0px 8px 0px rgba(0,0,0,1);
+	background-color: white;
+	border-color: #aaaaaa;
+	margin: 0px;
+	z-index: 0;
+	position: fixed;
+}
+
+.sidebar-right {
+	display: block;
+	position: fixed;
+	background-color: white;
+	min-width: 200px;
+	height: 100%;
+	box-shadow: -2px 0px 8px -1px rgba(0,0,0,1);
+    margin: 0px 0px 0px calc(100vw - 200px);
+	z-index: 0;
+}
