@@ -17,6 +17,11 @@
 	z-index: 2;
 }
 
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
 .navlink {
 	display: inline;
 	vertical-align: top;
@@ -93,11 +98,13 @@
 .predict-drop {
 	position: relative;
 	display: inline-block;
+	height: 100%;
 }
 
 .archive-drop {
 	position: relative;
 	display: inline-block;
+	height: 100%;
 }
 
 .predict-drop-content {
