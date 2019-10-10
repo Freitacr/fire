@@ -185,12 +185,12 @@ body {
 }
 
 .query-button {
+	position: absolute;
+	display: inline-block;
 	margin: auto;
-	position: relative;
-	display: block;
-	top: 10vh;
-	width: 24.1vw;
-	min-width: 400px;
+	top: 80%;
+	width: 24.1%;
+	left: Calc((100% - 24.1%) / 2);
 	height: 10vh;
 	border-radius: 1.5vw;
 	font-size: 5vh;
