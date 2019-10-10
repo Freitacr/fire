@@ -20,7 +20,7 @@
 }
 
 body {
-	background-color: #99aadd;
+    background-color: aliceblue;
 }
 
 .make-form {
@@ -176,6 +176,9 @@ body {
 	min-width: 233.1px;
 	font-size: 3vh;
 	box-shadow: 2px 1px 8px rgba(30,90,192,0.5);
+	border-style: inset;
+	border-color: #e6e9ec;
+	border-width: 2px;
 }
 
 .align-colon {
