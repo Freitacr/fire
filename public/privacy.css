@@ -37,3 +37,17 @@
     top: 6.1vh;
     z-index: -1;
 }
+
+.policy {
+    display: block;
+    padding-right: 200px;
+    padding-left: 30px;
+    padding-top: 1px;
+    padding-bottom: 10px;
+    border-bottom-style: groove;
+    border-width: 6px;
+}
+
+.blue-entry {
+    background-color: aliceblue;
+}
