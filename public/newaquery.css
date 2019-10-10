@@ -21,6 +21,10 @@
 
 body {
 	background-color: #99aadd;
+	width: 100%;
+}
+html {
+	
 }
 
 .make-form {
@@ -124,7 +128,6 @@ body {
 	margin: auto;
 	position: relative;
 	display: block;
-	top: 10vh;
 	width: 24.1vw;
 	min-width: 400px;
 	height: 10vh;
@@ -157,4 +160,23 @@ body {
 	box-shadow: -2px 0px 8px -1px rgba(0,0,0,1);
     margin: 0px 0px 0px calc(100vw - 200px);
 	z-index: 0;
+}
+
+.centre-space {
+	height: 100%;
+	width: 100vw;
+}
+
+.centre-space .footer {
+	position: fixed;
+	top: 92vh;
+	display: inline-block;
+}
+
+.button-div {
+	padding-top: 6vh;
+	padding-bottom: 1vh;
+	position: relative;
+	display: block;
+	margin: auto;
 }
