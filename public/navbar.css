@@ -120,7 +120,7 @@ html, body {
 .predict-drop-content {
 	display: none;
 	position: absolute;
-	top: 6.34vh;
+	top: 50px;
 	left: -.15vw;
 	background-image: linear-gradient(#afaeae, #5b5b5b, #afaeae);
 	width: 150%;
@@ -133,7 +133,7 @@ html, body {
 .archive-drop-content {
 	display: none;
 	position: absolute;
-	top: 6.34vh;
+	top: 50px;
 	left: -.45vw;
 	background-image: linear-gradient(#afaeae, #5b5b5b, #afaeae);
 	width: 150%;
