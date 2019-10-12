@@ -26,8 +26,9 @@
     position: relative;
     left: 4px;
     padding: 0px;
-    width: calc(100% - 377px);
+	width: calc(100% - 377px);
     margin: auto;
+	min-width: 300px;
 }
 
 .centre-space section {
@@ -41,5 +42,6 @@
     margin: 0px;
     width: 100%;
     top: 6.1vh;
-    z-index: -1;
+	z-index: -1;
+	min-width: 1000px;
 }

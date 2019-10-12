@@ -2,7 +2,6 @@ function OnResize() {
     let w = window.innerWidth;
     let h = window.innerHeight;
     
-    resizeNavbar(w, h);
     //let x = document.getElementById("predict-new-text");
     //console.log(x);
     //console.log(x.style.fontSize);
