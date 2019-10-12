@@ -10,9 +10,9 @@
 	border-top-color: #828282;
 	position: fixed;
 	top: 0;
-	left: 0;
-	width: 100%;
-	min-width: 824px;
+	left: 202px;
+	width: calc(100vw - 202px);
+	min-width: 624px;
 	overflow-y: visible;
 	white-space: nowrap;
 	z-index: 2;
@@ -55,11 +55,20 @@ html, body {
 	height: 111.4px;
 	width: 196px;
 	float: left;
-	border-style: none solid solid solid;
-	border-right-color: #828282;
-	border-left-color: #828282;
-	border-bottom-color: #828282;
-	z-index: 2;
+	border-style: solid;
+	border-color: #828282;
+	z-index: 3;
+}
+
+.logolink {
+	height: 111px;
+	width: 196px;
+	display:block;
+	position:fixed;
+	z-index:2;
+	top:-1px;
+	left:0px;
+	z-index: 3;
 }
 
 .predict {

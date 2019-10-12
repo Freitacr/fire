@@ -16,7 +16,7 @@ function retrieveResults() {
             reqBody = cookie.split('=')[1];
     })
     if(reqBody == undefined) {
-        //window.location.replace("newpquery.html");
+        window.location.replace("newpquery.html");
     }
     else{
         xhttp.open("PUT", "https://jcf-ai.com:16384/query", true);
