@@ -4,6 +4,7 @@ function Init() {
     navbar.addEventListener("wheel", ScrollWheel);
     initialLeft = navbar.offsetLeft;
     window.onresize = resizeNavbar;
+    resizeNavbar();
     //let x = document.getElementById("predict-new-text");
     //console.log(x);
     //console.log(x.style.fontSize);

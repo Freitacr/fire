@@ -236,7 +236,7 @@ html, body {
     position: relative;
     background-color: rgba(132, 149, 180, 0.801);
     top: 108px;
-    height: 70px;
+    height: 60px;
     border-style: solid solid solid none;
     border-color: #888888;
     border-width: 2px;
@@ -252,7 +252,7 @@ html, body {
     display: block;
     position: relative;
     margin-top: 19.08px;
-    font-size: 18pt;
+    font-size: 14pt;
     color: #000000af;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -263,7 +263,7 @@ html, body {
     position: relative;
     background-color: rgba(132, 149, 180, 0.801);
     top: 107px;
-    height: 70px;
+    height: 60px;
     border-style: solid solid solid none;
     border-color: #888888;
     border-width: 2px;
@@ -279,7 +279,7 @@ html, body {
     display: block;
     position: relative;
     margin-top: 19.08px;
-    font-size: 18pt;
+    font-size: 14pt;
     color: #000000af;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -290,7 +290,7 @@ html, body {
     position: relative;
     background-color: rgba(132, 149, 180, 0.801);
     top: 106px;
-    height: 95px;
+    height: 65px;
     border-style: solid solid solid none;
     border-color: #888888;
     border-width: 2px;
@@ -306,7 +306,7 @@ html, body {
     display: block;
     position: relative;
     margin-top: 19.08px;
-    font-size: 18pt;
+    font-size: 14pt;
     color: #000000af;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -317,7 +317,7 @@ html, body {
     position: relative;
     background-color: rgba(132, 149, 180, 0.801);
     top: 105px;
-    height: 95px;
+    height: 85px;
     border-style: solid solid solid none;
     border-color: #888888;
     border-width: 2px;
@@ -333,7 +333,7 @@ html, body {
     display: block;
     position: relative;
     margin-top: 19.08px;
-    font-size: 18pt;
+    font-size: 14pt;
     color: #000000af;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;

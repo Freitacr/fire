@@ -29,6 +29,7 @@ body {
 	top: 12vh;
 	min-width: 420px;
 	width: 45vw;
+	z-index: -1;
 }
 
 .make-text {
@@ -59,6 +60,7 @@ body {
 	top: 9vh;
 	min-width: 420px;
 	width: 45vw;
+	z-index: -1;
 }
 
 .model-text {
@@ -89,6 +91,7 @@ body {
 	top: 6vh;
 	min-width: 420px;
 	width: 45vw;
+	z-index: -1;
 }
 
 .year-text {
@@ -120,6 +123,7 @@ body {
 	top: 3vh;
 	min-width: 420px;
 	width: 45vw;
+	z-index: -1;
 }
 
 .jobid-text {
@@ -151,6 +155,7 @@ body {
 	top: 1vh;
 	min-width: 420px;
 	width: 45vw;
+	z-index: -1;
 }
 
 .complaint-text {
@@ -193,13 +198,15 @@ body {
 	margin: auto;
 	top: 80%;
 	width: 24.1%;
-	left: Calc((100% - 24.1%) / 2);
+	min-width: 400px;
+	left: Calc((100% - 24.1%) / 2.5);
 	height: 10vh;
 	border-radius: 1.5vw;
 	font-size: 5vh;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 	border-style: solid;
 	border-color: #525252;
+	z-index:0;
 }
 
 .sidebar-left {
@@ -211,7 +218,7 @@ body {
 	background-color: white;
 	border-color: #aaaaaa;
 	margin: 0px;
-	z-index: 0;
+	z-index: 1;
 	position: fixed;
 }
 
@@ -223,11 +230,24 @@ body {
 	height: 100%;
 	box-shadow: -2px 0px 8px -1px rgba(0,0,0,1);
     margin: 0px 0px 0px calc(100vw - 200px);
-	z-index: 0;
+	z-index: 1;
 }
 
 .centre-space .footer {
 	position: fixed;
 	top: 92vh;
+	height:75px;
 	display: inline-block;
+}
+
+.centre-space {
+	min-width: 1000px;
+}
+
+.button-div {
+	padding-top: 6vh;
+	padding-bottom: 1vh;
+	position: relative;
+	display: block;
+	margin: auto;
 }

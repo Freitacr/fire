@@ -23,7 +23,6 @@ function SetCookie(make, model, complaint) {
     cookieStr += '"model":"' + model + '",';
     cookieStr += '"complaint":"' + complaint + '"}';
     document.cookie = cookieStr + ";expires="+d.toUTCString()+";path=/;";
-    console.log(document.cookie);
 }
 
 function DeleteCookie() {
@@ -31,12 +30,33 @@ function DeleteCookie() {
     document.cookie = "OMISP_WEB_COOKIE=null;expires=" + d.toUTCString() + ";"
 }
 
+function Resize() {
+    RelocateButton();
+    ResizeFooter();
+}
+
+function ResizeFooter() {
+    let footer = document.getElementsByClassName("footer")[0];
+    footer.style.left = "202px";
+    let footerWidth = window.innerWidth - 397;
+    footer.style.width = footerWidth.toString() + "px";
+    let footerTop = window.innerHeight - footer.offsetHeight;
+    footer.style.top = footerTop.toString() + "px";
+}
+
+function RelocateButton() {
+    let button = document.getElementById("submitbutton");
+    let titleLeft = document.getElementsByClassName("query-title")[0].offsetLeft;
+    let buttonPosition = titleLeft;
+    button.style.left = buttonPosition.toString() + "px";
+}
+
 function init() {
     let button = document.getElementById("submitbutton");
     button.onclick = SubButtonClick;
-    console.log(document.cookie);
     DeleteCookie();
-    console.log(document.cookie);
+    window.addEventListener("resize", Resize);
+    Resize();
 }
 
 window.onload = init;
