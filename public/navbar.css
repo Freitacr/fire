@@ -241,7 +241,7 @@ html, body {
     border-color: #888888;
     border-width: 2px;
     text-align: center;
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .about-button:hover {
