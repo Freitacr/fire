@@ -31,9 +31,8 @@ html {
 	margin: auto;
 	position: relative;
 	top: 12vh;
-	min-width: 420px;
-	width: 40vw;
-	z-index:-1;
+	width: 400px;
+	z-index:0;
 }
 
 .make-text {
@@ -41,19 +40,10 @@ html {
 	display: block;
 }
 
-.make-text-align {
-	display: inline-block;
-	min-width: 120px;
-	width: 9.65vw;
-	text-align: right;
-}
-
 .make-text-form {
 	position: relative;
 	height: 5.55vh;
-	min-width: 233.1px;
-	width: 25vw;
-	float: right;
+	min-width: 400px;
 	font-size: 3vh;
 	box-shadow: 2px 1px 8px rgba(30,90,192,0.5);
 }
@@ -62,9 +52,8 @@ html {
 	margin: auto;
 	position: relative;
 	top: 9vh;
-	min-width: 420px;
-	width: 40vw;
-	z-index:-1;
+	width: 400px;
+	z-index:0;
 }
 
 .model-text {
@@ -72,19 +61,10 @@ html {
 	display: block;
 }
 
-.model-text-align {
-	display: inline-block;
-	min-width: 120px;
-	width: 9.65vw;
-	text-align: right;
-}
-
 .model-text-form {
 	position: relative;
 	height: 5.55vh;
-	width: 25vw;
-	float: right;
-	min-width: 233.1px;
+	min-width: 400px;
 	font-size: 3vh;
 	box-shadow: 2px 1px 8px rgba(30,90,192,0.5);
 }
@@ -93,9 +73,8 @@ html {
 	position: relative;
 	margin: auto;
 	top: 6vh;
-	min-width: 420px;
-	width: 40vw;
-	z-index:-1;
+	width: 408px;
+	z-index:0;
 }
 
 .year-text {
@@ -103,20 +82,12 @@ html {
 	display: block;
 }
 
-.year-text-align {
-	display: inline-block;
-	min-width: 120px;
-	width: 9.65vw;
-	text-align: right;
-}
-
 .year-text-form {
 	position: relative;
 	display: block;
 	float: right;
 	height: 5.55vh;
-	width: 25vw;
-	min-width: 233.1px;
+	width: 400px;
 	font-size: 3vh;
 	box-shadow: 2px 1px 8px rgba(30,90,192,0.5);
 }
@@ -150,7 +121,7 @@ html {
 	background-color: white;
 	border-color: #aaaaaa;
 	margin: 0px;
-	z-index: 1;
+	z-index: 2;
 	position: fixed;
 }
 
@@ -162,7 +133,7 @@ html {
 	height: 100%;
 	box-shadow: -2px 0px 8px -1px rgba(0,0,0,1);
     margin: 0px 0px 0px calc(100vw - 200px);
-	z-index: 1;
+	z-index: 2;
 }
 
 .centre-space {

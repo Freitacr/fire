@@ -27,9 +27,8 @@ body {
 	margin: auto;
 	position: relative;
 	top: 12vh;
-	min-width: 420px;
-	width: 45vw;
-	z-index: -1;
+	width: 400px;
+	z-index: 0;
 }
 
 .make-text {
@@ -37,19 +36,10 @@ body {
 	display: block;
 }
 
-.make-text-align {
-	display: inline-block;
-	min-width: 175px;
-	width: 15vw;
-	text-align: right;
-}
-
 .make-text-form {
 	position: relative;
 	height: 5.55vh;
-	min-width: 233.1px;
-	width: 25vw;
-	float: right;
+	width: 400px;
 	font-size: 3vh;
 	box-shadow: 2px 1px 8px rgba(30,90,192,0.5);
 }
@@ -58,9 +48,8 @@ body {
 	margin: auto;
 	position: relative;
 	top: 9vh;
-	min-width: 420px;
-	width: 45vw;
-	z-index: -1;
+	width: 400px;
+	z-index: 0;
 }
 
 .model-text {
@@ -68,19 +57,10 @@ body {
 	display: block;
 }
 
-.model-text-align {
-	display: inline-block;
-	min-width: 175px;
-	width: 15vw;
-	text-align: right;
-}
-
 .model-text-form {
 	position: relative;
 	height: 5.55vh;
-	width: 25vw;
-	float: right;
-	min-width: 233.1px;
+	width: 400px;
 	font-size: 3vh;
 	box-shadow: 2px 1px 8px rgba(30,90,192,0.5);
 }
@@ -89,9 +69,8 @@ body {
 	position: relative;
 	margin: auto;
 	top: 6vh;
-	min-width: 420px;
-	width: 45vw;
-	z-index: -1;
+	width: 408px;
+	z-index: 0;
 }
 
 .year-text {
@@ -99,20 +78,12 @@ body {
 	display: block;
 }
 
-.year-text-align {
-	display: inline-block;
-	min-width: 175px;
-	width: 15vw;
-	text-align: right;
-}
-
 .year-text-form {
 	position: relative;
 	display: block;
 	float: right;
 	height: 5.55vh;
-	width: 25vw;
-	min-width: 233.1px;
+	width: 400px;
 	font-size: 3vh;
 	box-shadow: 2px 1px 8px rgba(30,90,192,0.5);
 }
@@ -121,9 +92,8 @@ body {
     position: relative;
 	margin: auto;
 	top: 3vh;
-	min-width: 420px;
-	width: 45vw;
-	z-index: -1;
+	width: 408px;
+	z-index: 0;
 }
 
 .jobid-text {
@@ -131,20 +101,12 @@ body {
 	display: block;
 }
 
-.jobid-text-align {
-	display: inline-block;
-	min-width: 175px;
-	width: 15vw;
-	text-align: right;
-}
-
 .jobid-text-form {
 	position: relative;
 	display: block;
 	float: right;
 	height: 5.55vh;
-	width: 25vw;
-	min-width: 233.1px;
+	width: 400px;
 	font-size: 3vh;
 	box-shadow: 2px 1px 8px rgba(30,90,192,0.5);
 }
@@ -153,21 +115,13 @@ body {
     position: relative;
 	margin: auto;
 	top: 1vh;
-	min-width: 420px;
-	width: 45vw;
-	z-index: -1;
+	width: 414px;
+	z-index: 0;
 }
 
 .complaint-text {
 	font-size: 4.8vh;
 	display: block;
-}
-
-.complaint-text-align {
-	display: inline-block;
-	min-width: 175px;
-	width: 15vw;
-	text-align: right;
 }
 
 .complaint-text-form {
@@ -177,19 +131,12 @@ body {
     resize: none;
     text-align: left;
 	height: 10vh;
-	width: 25vw;
-	min-width: 233.1px;
+	width: 400px;
 	font-size: 3vh;
 	box-shadow: 2px 1px 8px rgba(30,90,192,0.5);
 	border-style: inset;
 	border-color: #e6e9ec;
 	border-width: 2px;
-}
-
-.align-colon {
-	position: relative;
-	display: block;
-	float: right;
 }
 
 .query-button {
