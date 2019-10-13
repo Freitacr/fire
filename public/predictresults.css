@@ -11,7 +11,7 @@ body {
 	background-color: white;
 	border-color: #aaaaaa;
 	margin: 0px;
-	z-index: 0;
+	z-index: 1;
 	position: fixed;
 }
 
@@ -23,10 +23,11 @@ body {
 	height: 100%;
 	box-shadow: -2px 0px 8px -1px rgba(0,0,0,1);
     margin: 0px 0px 0px calc(100vw - 200px);
-	z-index: 0;
+	z-index: 1;
 }
 
 .centre-space {
+	min-width: 1000px;
     width: calc(100% - 400px);
     margin: 0 200px 0 200px;
     padding: 0px;
@@ -35,11 +36,13 @@ body {
 }
 
 .table-main {
-    width: 100%;
-    margin: auto;
+	min-width: 800px;
+    width: calc(100vw - 400px);
+    margin: 0px auto 200px 0px;
     border: solid;
     border-width: 1px;
-    border-collapse: collapse;
+	border-collapse: collapse;
+	
 }
 
 .table-main th{
@@ -50,4 +53,9 @@ body {
 .table-main td{
     border: solid;
     border-width: 1px;
+}
+
+.footer {
+	height: 75px;
+	position: fixed;
 }

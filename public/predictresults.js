@@ -16,7 +16,7 @@ function retrieveResults() {
             reqBody = cookie.split('=')[1];
     })
     if(reqBody == undefined) {
-        window.location.replace("newpquery.html");
+        //window.location.replace("newpquery.html");
     }
     else{
         xhttp.open("PUT", "https://jcf-ai.com:16384/query", true);
@@ -25,6 +25,23 @@ function retrieveResults() {
     }
 }
 
+function init() {
+    window.addEventListener("resize", Resize);
+    Resize();
+    retrieveResults();
+}
 
+function Resize() {
+    ResizeFooter();
+}
 
-window.onload=retrieveResults;
+function ResizeFooter() {
+    let footer = document.getElementsByClassName("footer")[0];
+    footer.style.left = "202px";
+    let footerWidth = window.innerWidth - 397;
+    footer.style.width = footerWidth.toString() + "px";
+    let footerTop = window.innerHeight - footer.offsetHeight;
+    footer.style.top = footerTop.toString() + "px";
+}
+
+window.onload=init;
