@@ -29,13 +29,14 @@
     padding: 0px;
 	width: calc(100% - 377px);
     margin: auto;
-	min-width: 300px;
+	min-width: 500px;
 }
 
 .centre-space section {
     position: relative;
     padding-left: 25px;
-    padding-top: 2px;
+	padding-top: 2px;
+	padding-right: 200px;
 }
 
 .centre-stage {
