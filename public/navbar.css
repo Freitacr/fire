@@ -228,7 +228,8 @@ html, body {
 }
 
 .sidebar-left a {
-    text-decoration: none;
+	text-decoration: none;
+	color: rgba(0,0,0,.68);
 }
 
 .about-button {
