@@ -9,15 +9,15 @@
 		gtag('js', new Date());
 		gtag('config', 'UA-148998020-1');
 	</script>
-	<title>New Archive Query</title>
+	<title>Log Out</title>
 	<link rel="stylesheet" href="navbar.css"/>
-	<link rel="stylesheet" href="newaquery.css"/>
-	<link rel="shortcut icon" href="OMIS Logo.ico" type="image/x-icon"/>
-	<script src="tokenUtil.js"></script>
-	<script src="navbar.js"></script>
-	<script src="newaquery.js"></script>
+	<link rel="stylesheet" href="logout.css"/>
+    <link rel="shortcut icon" href="OMIS Logo.ico" type="image/x-icon"/>
+    <script src="navbar.js"></script>
+    <script src="tokenUtil.js"></script>
+    <script src="logout.js"></script>
 </head>
-<body>
+<body">
 	<div class="logolink">
 		<a href = "index.html">
 			<img class="logo" src="OMIS Logo.jpg" alt="OMIS Logo"/>
@@ -64,47 +64,38 @@
 	</ul>
 	<div class="sidebar-left">
 		<a href="about.html">
-			<div class="about-button">
-				<span>About</span>  
-			</div>
-		</a>
-		<a href="about.html#contact">
-			<div class="contact-button">
-				<span>Contact Us</span>
-			</div>
-		</a>
-		<a href="privacy.html">
-			<div class="privacy-button">
-				<span>Privacy Policy</span>
-			</div>
-		</a>
-		<a href="devdiary.html">
-			<div class="dev-diary-button">
-				<span>Development<br>Diary</span>
-			</div>
-		</a>
+				<div class="about-button">
+					<span>About</span>  
+				</div>
+			</a>
+			<a href="about.html#contact">
+				<div class="contact-button">
+					<span>Contact Us</span>
+				</div>
+			</a>
+			<a href="privacy.html">
+				<div class="privacy-button">
+					<span>Privacy Policy</span>
+				</div>
+			</a>
+			<a href="devdiary.html">
+				<div class="dev-diary-button">
+					<span>Development<br>Diary</span>
+				</div>
+			</a>
 	</div>
 	<div class="sidebar-right">
-	</div>
-	<div class="centre-space">
-		<div class="query-title">
-			<p class="query-title-text">New Query</p>
-		</div>
-		<form class="make-form">
-			<p class="make-text"><input type="text" placeholder="Make" name="make"class="make-text-form"><br></p>
-		</form>
-		<form class="model-form">
-			<p class="model-text"><input type="text" placeholder="Model" name="model"class="model-text-form"><br></p>
-		</form>
-		<form class="year-form">
-			<p class="year-text"><input placeholder="Year" type="text" name="year"class="year-text-form"><br></p>
-		</form>
-		<div class="button-div">
-			<button class="query-button" value="submit" type="button" id="submitbutton">Search
-			</button>
-		</div>
-		<div class="footer">
-			<p>While using this site, you agree to have read and accepted our <a href="privacy.html#terms-conditions">terms of use</a> and <a href="privacy.html#privacy-policy">privacy policy</a>.</p>
-		</div>
-	</div>
+    </div>
+    <section class="centre-stage">
+        <div class="centre-space">
+            <section class="jsection">
+                <h2 id="status">Status</h2>
+            </section>
+            <div class="footer">
+				<p>While using this site, you agree to have read and accepted our <a href="privacy.html#terms-conditions">terms of use</a> and <a href="privacy.html#privacy-policy">privacy policy</a>.</p>
+			</div>
+        </div>
+        
+    </section>
 </body>
+</html>

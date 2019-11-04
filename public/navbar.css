@@ -105,6 +105,57 @@ html, body {
 	text-align: center;	
 }
 
+.admin {
+	display: none;
+	float: right;
+	width: 90px;
+	border-left-style: solid;
+	border-left-color: #828282;
+	text-align: center;
+}
+
+.parts {
+	display: none;
+	float: right;
+	width: 90px;
+	border-left-style: solid;
+	border-left-color: #828282;
+	text-align: center;
+	margin-right: 2px;
+}
+
+.safety {
+	display: none;
+	float: right;
+	width: 90px;
+	border-left-style: solid;
+	border-left-color: #828282;
+	text-align: center;
+	margin-right: 2px;
+}
+
+.account {
+	display: none;
+	float: right;
+	width: 90px;
+	border-left-style: solid;
+	border-left-color: #828282;
+	text-align: center;
+	margin-right: 2px;
+}
+
+.logout {
+	display: none;
+	float: right;
+	width: 90px;
+	border-left-style: solid;
+	border-right-style: solid;
+	border-left-color: #828282;
+	border-right-color: #828282;
+	text-align: center;
+	margin-right: 2px;
+}
+
 .predict-drop {
 	position: relative;
 	display: inline-block;

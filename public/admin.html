@@ -9,13 +9,13 @@
 		gtag('js', new Date());
 		gtag('config', 'UA-148998020-1');
 	</script>
-	<title>New Archive Query</title>
+	<title>Administration</title>
 	<link rel="stylesheet" href="navbar.css"/>
-	<link rel="stylesheet" href="newaquery.css"/>
+	<link rel="stylesheet" href="admin.css"/>
 	<link rel="shortcut icon" href="OMIS Logo.ico" type="image/x-icon"/>
 	<script src="tokenUtil.js"></script>
 	<script src="navbar.js"></script>
-	<script src="newaquery.js"></script>
+	<script src="admin.js"></script>
 </head>
 <body>
 	<div class="logolink">
@@ -64,9 +64,9 @@
 	</ul>
 	<div class="sidebar-left">
 		<a href="about.html">
-			<div class="about-button">
-				<span>About</span>  
-			</div>
+				<div class="about-button">
+					<span>About</span>  
+				</div>
 		</a>
 		<a href="about.html#contact">
 			<div class="contact-button">
@@ -85,26 +85,58 @@
 		</a>
 	</div>
 	<div class="sidebar-right">
-	</div>
-	<div class="centre-space">
-		<div class="query-title">
-			<p class="query-title-text">New Query</p>
+    </div>
+	<section class="centre-stage">
+    	<div class="centre-space">
+			<div class="user-labels admin-view align-center">
+				<div>
+					<h2>Current Users in Company</h2>
+					<table id="user-labels">
+						<tr>
+							<th>Email</th>
+							<th>Display Name</th>
+							<th>Access Level</th>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="auto-test-results admin-view align-right">
+				<div>
+					<h2>Automated Testing Results</h2>
+					<table id="test-results">
+						<tr>
+							<th>Result</th>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="settings admin-view align-center">
+				<div>
+					<h2>Company Settings</h2>
+					<table id="settings-table">
+						<tr>
+							<th>Key</th>
+							<th>Value</th>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="join-requests admin-view align-center">
+				<div>
+					<h2>Pending Join Requests</h2>
+					<table id="join-requests">
+						<tr>
+							<th>Email</th>
+							<th>Display Name</th>
+							<th>Accept</th>
+							<th>Deny</th>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="footer">
+				<p>While using this site, you agree to have read and accepted our <a href="privacy.html#terms-conditions">terms of use</a> and <a href="privacy.html#privacy-policy">privacy policy</a>.</p>
+			</div>
 		</div>
-		<form class="make-form">
-			<p class="make-text"><input type="text" placeholder="Make" name="make"class="make-text-form"><br></p>
-		</form>
-		<form class="model-form">
-			<p class="model-text"><input type="text" placeholder="Model" name="model"class="model-text-form"><br></p>
-		</form>
-		<form class="year-form">
-			<p class="year-text"><input placeholder="Year" type="text" name="year"class="year-text-form"><br></p>
-		</form>
-		<div class="button-div">
-			<button class="query-button" value="submit" type="button" id="submitbutton">Search
-			</button>
-		</div>
-		<div class="footer">
-			<p>While using this site, you agree to have read and accepted our <a href="privacy.html#terms-conditions">terms of use</a> and <a href="privacy.html#privacy-policy">privacy policy</a>.</p>
-		</div>
-	</div>
+	</section>
 </body>

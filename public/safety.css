@@ -1,0 +1,90 @@
+.sidebar-left {
+	display: block;
+	min-width: 200px;
+	left: 0vw;
+	height: 100%;
+	box-shadow: 0px 0px 8px 0px rgba(0,0,0,1);
+	background-color: white;
+	border-color: #aaaaaa;
+	margin: 0px;
+	z-index: 1;
+    position: fixed;
+    top: 8px;
+}
+
+.sidebar-right {
+	display: block;
+	position: fixed;
+	background-color: white;
+	min-width: 200px;
+	height: 100%;
+	box-shadow: -2px 0px 8px -1px rgba(0,0,0,1);
+    margin: 0px 0px 0px calc(100vw - 200px);
+	z-index: 1;
+}
+
+.centre-space {
+    position: relative;
+    left: 4px;
+    padding: 0px;
+    width: calc(100% - 377px);
+    margin: auto;
+}
+
+.centre-stage {
+    position: relative;
+    margin: 0px;
+    width: 100%;
+    top: 6.1vh;
+    z-index: 0;
+    min-width: 1000px;
+}
+
+.safety-view {
+    display: block;
+    margin: auto;
+    width: initial;
+    max-height: 300px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.safety-view div {
+    margin: auto;
+    width: 80%;
+    margin-left: 10%;
+    display:inline-block;
+    border-width: 1px;
+    border-style:solid;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.safety-view h2 {
+    margin-left: 2%;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.safety-view table {
+    margin: auto;
+    border-style: solid;
+    border-collapse: collapse;
+    border-width: 2px;
+    width: 95%;
+    margin-bottom: 10px;
+}
+
+.safety-view table th {
+    border: solid;
+    border-width: 2px;
+}
+
+.align-center table td {
+    text-align: center;
+}
+
+.safety-view table td {
+    border: solid;
+    border-width: 2px;
+}

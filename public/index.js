@@ -18,6 +18,7 @@ function Init() {
     forumBlurb = document.getElementsByClassName("forum-blurb")[0];
     forumInfo = document.getElementsByClassName("forum-info")[0];
     window.onresize = OnResize;
+    OnResize();
 }
 
 function OnResize() {
