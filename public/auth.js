@@ -12,6 +12,13 @@ async function init(){
     retrieveSecurityQuestion(loginToken);
     let submitButton = document.getElementById("submit-button");
     submitButton.addEventListener("click", function(a){performAuthenticationRequest(loginToken, redirectToken)});
+    let answerForm = document.getElementById("answer-text-form");
+    answerForm.addEventListener("keydown", function(e) {
+        if(e.keyCode == 13) {
+            e.preventDefault();
+            submitButton.click();
+        }
+    })
 }
 
 function retrieveSecurityQuestion(loginToken){

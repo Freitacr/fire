@@ -2,6 +2,16 @@ function init(){
     let redirectToken = RetrieveRedirectCookie(false);
     let submitButton = document.getElementById("submit-button");
     submitButton.addEventListener("click", function(a) {performLoginAttempt(redirectToken)});
+    let emailTextForm = document.getElementById("email-text-form");
+    let passwordTextForm = document.getElementById("password-text-form");
+    let overrideSubmit = function(e) {
+        if(e.keyCode == 13){
+            e.preventDefault();
+            submitButton.click();
+        }
+    }
+    emailTextForm.addEventListener("keydown", overrideSubmit);
+    passwordTextForm.addEventListener("keydown", overrideSubmit);
 }
 
 function performLoginAttempt(redirectToken) {

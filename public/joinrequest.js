@@ -12,8 +12,6 @@ async function init() {
     let loginTokenTest = IsUserLoggedIn();
     let loginToken;
     loginTokenTest.then(val => {loginToken = val});
-    let footer = document.getElementsByClassName("footer")[0];
-    footer.style.marginTop = "508px";
     let searchButton = document.getElementById("search-button");
     searchButton.addEventListener("click", function() {retrieveCompanies(loginToken, authToken)})
 }
@@ -48,8 +46,6 @@ function retrieveCompanies(loginToken, authToken) {
                 companyTable.addEventListener("click", function(e) {handleButtonClick(e, loginToken, authToken)});
                 let companyTableDiv = document.getElementsByClassName("company-results")[0];
                 companyTableDiv.style.display="block";
-                let footer = document.getElementsByClassName("footer")[0];
-                footer.style.marginTop = "10px";
             } catch (SyntaxError) {
 
             }
