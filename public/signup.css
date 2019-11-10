@@ -37,7 +37,10 @@
     width: 100%;
     top: 6.1vh;
     z-index: 0;
-    min-width: 1000px;
+	min-width: 1000px;
+	height: 100%;
+	background-color: aliceblue;
+	padding-top: 10px;
 }
 
 .centre-stage form {
@@ -45,6 +48,10 @@
 	width: 60%;
 	height: 10%;
 
+}
+
+.sign-up div h2 {
+	text-align: center;
 }
 
 .centre-stage form input {
