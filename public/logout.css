@@ -31,11 +31,20 @@
     margin: auto;
 }
 
+.centre-space h2 {
+	text-align: center;
+	font-size: 28pt;
+	padding-bottom: 558px;
+}
+
 .centre-stage {
     position: relative;
     margin: 0px;
     width: 100%;
     top: 6.1vh;
     z-index: 0;
-    min-width: 1000px;
+	min-width: 1000px;
+	height: 100%;
+	background-color: aliceblue;
+	padding-top: 10px;
 }

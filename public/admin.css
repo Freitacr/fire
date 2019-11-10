@@ -37,7 +37,10 @@
     width: 100%;
     top: 6.1vh;
     z-index: 0;
+    background-color: aliceblue;
     min-width: 1000px;
+    padding-top: 20px;
+    height: 100%;
 }
 
 .admin-view {
