@@ -1,6 +1,6 @@
 function Resize() {
     RelocateButton();
-    ResizeFooter();
+    //ResizeFooter();
 }
 
 function ResizeFooter() {

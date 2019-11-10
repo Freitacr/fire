@@ -32,7 +32,7 @@ function DeleteCookie() {
 
 function Resize() {
     RelocateButton();
-    ResizeFooter();
+    //ResizeFooter();
 }
 
 function ResizeFooter() {
@@ -54,6 +54,22 @@ function RelocateButton() {
 function init() {
     let button = document.getElementById("submitbutton");
     button.onclick = SubButtonClick;
+    let maketextform = document.getElementById("make-text-form");
+    let modeltextform = document.getElementById("model-text-form");
+    let complainttextform = document.getElementById("complaint-text-form");
+    let jobIdTextForm = document.getElementById("jobid-text-form");
+    let yearTextForm = document.getElementById("year-text-form");
+    let overrideSubmit = function(e) {
+        if(e.keyCode == 13) {
+            e.preventDefault();
+            button.click();
+        }
+    }
+    maketextform.addEventListener("keydown", overrideSubmit);
+    modeltextform.addEventListener("keydown", overrideSubmit);
+    complainttextform.addEventListener("keydown", overrideSubmit);
+    jobIdTextForm.addEventListener("keydown", overrideSubmit);
+    yearTextForm.addEventListener("keydown", overrideSubmit);
     DeleteCookie();
     window.addEventListener("resize", Resize);
     Resize();

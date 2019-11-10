@@ -8,6 +8,7 @@ async function init(){
         alert("User was not logged in, redirecting to login page");
         ConstructRedirectCookie(false, "auth.html");
         window.location.replace("login.html");
+        return;
     }
     retrieveSecurityQuestion(loginToken);
     let submitButton = document.getElementById("submit-button");

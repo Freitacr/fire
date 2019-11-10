@@ -14,6 +14,13 @@ async function init() {
     loginTokenTest.then(val => {loginToken = val});
     let searchButton = document.getElementById("search-button");
     searchButton.addEventListener("click", function() {retrieveCompanies(loginToken, authToken)})
+    let companyForm = document.getElementById("company-results");
+    companyForm.addEventListener("keydown", function(e) {
+        if(e.keyCode == 13) {
+            e.preventDefault();
+            searchButton.click();
+        }
+    })
 }
 
 function retrieveCompanies(loginToken, authToken) {
