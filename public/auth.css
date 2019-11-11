@@ -37,7 +37,10 @@
     width: 100%;
     top: 6.1vh;
     z-index: 0;
-    min-width: 1000px;
+	min-width: 1000px;
+	height: 100%;
+	padding-top:10px;
+	background-color: aliceblue;
 }
 
 .centre-stage form {
@@ -46,6 +49,11 @@
 	height: 10%;
 
 }
+
+.user-auth {
+	text-align: center;
+}
+
 .centre-stage form input {
 	margin-left: 12.5%;
 	width: 75%;

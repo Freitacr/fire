@@ -38,6 +38,9 @@
     top: 6.1vh;
     z-index: 0;
     min-width: 1000px;
+    height: 100%;
+    padding-top: 20px;
+    background-color: aliceblue;
 }
 
 .safety-view {
@@ -46,7 +49,6 @@
     width: initial;
     max-height: 300px;
     margin-bottom: 20px;
-    margin-top: 20px;
 }
 
 .safety-view div {
