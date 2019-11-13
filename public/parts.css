@@ -38,6 +38,8 @@
     top: 6.1vh;
     z-index: 0;
     min-width: 1000px;
+    padding-top:10px;
+	background-color: aliceblue;
 }
 
 .parts-view {
