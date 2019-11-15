@@ -21,7 +21,7 @@ function retrieveComplaintGroupResults(loginCookie) {
         },
         UserId: loginCookie.userId,
         LoginToken: loginCookie.token,
-        CompanyId: 1
+        CompanyId: parseInt(bodyObj.companyId)
     };
 
     let fetchInit = {
@@ -100,7 +100,7 @@ function retrieveQueryResults(loginCookie, complaintGroupId) {
         },
         UserId: loginCookie.userId,
         LoginToken: loginCookie.token,
-        CompanyId: 1,
+        CompanyId: parseInt(bodyObj.companyId),
         ComplaintGroupId: complaintGroupId
     };
     let fetchInit = {
