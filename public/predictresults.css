@@ -26,19 +26,50 @@ body {
 	z-index: 1;
 }
 
+.centre-stage {
+    position: relative;
+    margin: 0px;
+    width: 100%;
+    top: 6.1vh;
+    z-index: 0;
+    min-width: 1000px;
+    padding-top:10px;
+	background-color: aliceblue;
+}
+
 .centre-space {
-	min-width: 1000px;
-    width: calc(100% - 400px);
-    margin: 0 200px 0 200px;
+    position: relative;
+    left: 4px;
     padding: 0px;
-    position: absolute;
-    top: 12.5vh;
+    width: calc(100% - 377px);
+    margin: auto;
+}
+
+.complaint-group {
+	position: relative;
+	min-width: 400px;
+	width: 50%;
+	margin: 25px auto 175px auto;
+	border: solid;
+    border-width: 1px;
+	border-collapse: collapse;
+}
+
+.complaint-group th{
+    border: solid;
+    border-width: 1px;
+}
+
+.complaint-group td{
+    border: solid;
+    border-width: 1px;
 }
 
 .table-main {
+	display: none;
 	min-width: 800px;
     width: calc(100vw - 400px);
-    margin: 0px auto 200px 0px;
+    margin: 0px auto 100px auto;
     border: solid;
     border-width: 1px;
 	border-collapse: collapse;
@@ -55,7 +86,11 @@ body {
     border-width: 1px;
 }
 
-.footer {
-	height: 75px;
-	position: fixed;
+.upload-link {
+	text-align: center;
+	display:none;
+}
+
+.cgroup:hover {
+	cursor: pointer;
 }

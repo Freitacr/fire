@@ -51,7 +51,15 @@ function RelocateButton() {
     button.style.left = buttonPosition.toString() + "px";
 }
 
-function init() {
+async function init() {
+    let loginCookie;
+    await IsUserLoggedIn().then(val => {loginCookie = val});
+    if(loginCookie == false) {
+        ConstructRedirectCookie(false, "newpquery.html");
+        window.location.replace("login.html");
+        alert("User was not logged in, redirecting");
+        return;
+    }
     let button = document.getElementById("submitbutton");
     button.onclick = SubButtonClick;
     let maketextform = document.getElementById("make-text-form");

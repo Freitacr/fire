@@ -15,7 +15,7 @@ async function init(){
         window.location.replace("index.html");
         return;
     }
-	retrievePartRequests(authCookie,loginCookie);
+	retrievePartsRequests(authCookie,loginCookie);
 }
 
 //Parts Ordering requests
