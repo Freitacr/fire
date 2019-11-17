@@ -92,6 +92,48 @@ html {
 	box-shadow: 2px 1px 8px rgba(30,90,192,0.5);
 }
 
+.company-dropdown{
+	position: relative;
+	margin: auto;
+	top: 6vh;
+	width: 414px;
+	z-index: 1;
+}
+
+.company-dropdown-form {
+	margin-left: 8px;
+	width: 97%;
+	font-size: 14pt;
+}
+
+.problem-form {
+    position: relative;
+	margin: auto;
+	top: 4vh;
+	width: 414px;
+	z-index: 0;
+}
+
+.problem-text {
+	font-size: 4.8vh;
+	display: block;
+}
+
+.problem-text-form {
+	position: relative;
+	display: block;
+    float: right;
+    resize: none;
+    text-align: left;
+	height: 10vh;
+	width: 400px;
+	font-size: 3vh;
+	box-shadow: 2px 1px 8px rgba(30,90,192,0.5);
+	border-style: inset;
+	border-color: #e6e9ec;
+	border-width: 2px;
+}
+
 .align-colon {
 	position: relative;
 	display: block;
@@ -102,6 +144,7 @@ html {
 	margin: auto;
 	position: relative;
 	display: block;
+	top: 4vh;
 	width: 24.1vw;
 	min-width: 400px;
 	height: 10vh;

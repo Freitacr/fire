@@ -9,13 +9,13 @@
 		gtag('js', new Date());
 		gtag('config', 'UA-148998020-1');
 	</script>
-	<title>New Archive Query</title>
+	<title>Archive Query Results</title>
 	<link rel="stylesheet" href="navbar.css"/>
-	<link rel="stylesheet" href="newaquery.css"/>
+	<link rel="stylesheet" href="archiveresults.css"/>
 	<link rel="shortcut icon" href="OMIS Logo.ico" type="image/x-icon"/>
 	<script src="tokenUtil.js"></script>
 	<script src="navbar.js"></script>
-	<script src="newaquery.js"></script>
+    <script src="archiveresults.js"></script>
 </head>
 <body>
 	<div class="logolink">
@@ -86,33 +86,28 @@
 	</div>
 	<div class="sidebar-right">
 	</div>
-	<div class="centre-space">
-		<div class="footer-spacer">
-			<div class="query-title">
-				<p class="query-title-text">New Query</p>
+	<section class="centre-stage">
+		<div class="centre-space">
+			<div class="footer-spacer">
+				<table class="problem-group" id="problem-group-table">
+					<tr>
+						<th>Group Keywords</th>
+					</tr>
+				</table>
+				<table class="table-main" id="table-main">
+					<tr>
+						<th>Make</th>
+						<th>Model</th>
+						<th>Year</th>
+						<th>Problem</th>
+						<th>Similarity</th>
+					</tr>
+				</table>
+				<a href="uploadjob.html" class="upload-link" id="link">Don't see your problem? Upload it so others can find it!</a>
 			</div>
-			<form class="make-form">
-				<p class="make-text"><input type="text" placeholder="Make" name="make" class="make-text-form" id="make-text-form"><br></p>
-			</form>
-			<form class="model-form">
-				<p class="model-text"><input type="text" placeholder="Model" name="model" class="model-text-form" id="model-text-form"><br></p>
-			</form>
-			<form class="year-form">
-				<p class="year-text"><input placeholder="Year" type="text" name="year" class="year-text-form" id="year-text-form"><br></p>
-			</form>
-			<form class="problem-form">
-					<p class="problem-text"><textarea rows=3 cols=60 placeholder="Anticipated Problem" name= "problem-text-form" class="problem-text-form" id="problem-text-form"></textarea><br></p>
-				</form>
-			<form class="company-dropdown">
-				<select name="valid-companies" class="company-dropdown-form" id="company-dropdown-form"></select>
-			</form>
-			<div class="button-div">
-				<button class="query-button" value="submit" type="button" id="submitbutton">Search
-				</button>
+			<div class="footer">
+				<p>While using this site, you agree to have read and accepted our <a href="privacy.html#terms-conditions">terms of use</a> and <a href="privacy.html#privacy-policy">privacy policy</a>.</p>
 			</div>
 		</div>
-		<div class="footer">
-			<p>While using this site, you agree to have read and accepted our <a href="privacy.html#terms-conditions">terms of use</a> and <a href="privacy.html#privacy-policy">privacy policy</a>.</p>
-		</div>
-	</div>
+	</section>
 </body>
