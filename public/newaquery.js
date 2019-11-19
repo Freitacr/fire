@@ -3,14 +3,26 @@ function SubButtonClick() {
     let modeltextform = document.getElementById("model-text-form");
     let problemTextForm = document.getElementById("problem-text-form");
     let companyDropdownForm = document.getElementById("company-dropdown-form");
+    let yearForm = document.getElementById("year-text-form");
+    let complaintForm = document.getElementById("complaint-text-form");
     let make = maketextform.value;
     let model = modeltextform.value;
     let problem = problemTextForm.value;
     let companyId = companyDropdownForm.options[companyDropdownForm.selectedIndex].value
-    if(ValidateTextForms(make, model, problem)) {
-        SetCookie(make, model, problem, companyId);
-        window.location.href = "archiveresults.html";
-    }
+    let complaint = complaintForm.value;
+    let year = yearForm.value;
+    if(make == '')
+        make = undefined;
+    if(model == '')
+        model = undefined;
+    if(problem == '')
+        problem = undefined;
+    if(complaint == '')
+        complaint = undefined;
+    if(year == '')
+        year = undefined;
+    SetCookie(make, model, problem, companyId, complaint, year);
+    window.location.href = "archiveresults.html";
 }
 
 function Resize() {
@@ -60,14 +72,18 @@ function ValidateTextForms(make, model, problem) {
     return (make !== "") && (model !== "") && (problem != "");
 }
 
-function SetCookie(make, model, problem, companyId) {
+function SetCookie(make, model, problem, companyId, complaint, year) {
     let d = new Date();
     d.setTime(d.getTime() + (7 * 1000 * 60 * 60 * 24));
-    let cookieStr = "OMISA_WEB_COOKIE={";
-    cookieStr += '"make":"' + make + '",';
-    cookieStr += '"model":"' + model + '",';
-    cookieStr += '"companyId":"' + companyId + '",';
-    cookieStr += '"problem":"' + problem + '"}';
+    let cookieObj = {};
+    cookieObj.make = make;
+    cookieObj.model = model;
+    cookieObj.companyId = companyId;
+    cookieObj.complaint = complaint;
+    cookieObj.year = year;
+    cookieObj.problem = problem;
+    
+    let cookieStr = "OMISA_WEB_COOKIE=" + JSON.stringify(cookieObj);
     document.cookie = cookieStr + ";expires="+d.toUTCString()+";path=/;";
 }
 
@@ -94,6 +110,7 @@ async function init() {
     let problemtextform = document.getElementById("problem-text-form");
     let companyDropdownForm = document.getElementById("company-dropdown-form");
     let yearTextForm = document.getElementById("year-text-form");
+    let complaintTextForm = document.getElementById("complaint-text-form");
     let overrideSubmit = function(e) {
         if(e.keyCode == 13) {
             e.preventDefault();
@@ -105,6 +122,7 @@ async function init() {
     problemtextform.addEventListener("keydown", overrideSubmit);
     companyDropdownForm.addEventListener("keydown", overrideSubmit);
     yearTextForm.addEventListener("keydown", overrideSubmit);
+    complaintTextForm.addEventListener("keydown", overrideSubmit);
     RetrieveValidCompanies(loginCookie);
 
     window.addEventListener("resize", Resize);

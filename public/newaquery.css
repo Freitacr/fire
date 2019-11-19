@@ -5,7 +5,7 @@
 	text-align: center;
 	top: 14vh;
 	width: 400px;
-	height: 116.865px;
+	height: 86.865px;
 	z-index: 0;
 }
 
@@ -108,7 +108,7 @@ html {
 
 .problem-form {
     position: relative;
-	margin: auto;
+	margin: auto auto 60px auto;
 	top: 4vh;
 	width: 414px;
 	z-index: 0;
@@ -185,16 +185,10 @@ html {
 	min-width: 1000px;
 }
 
-.centre-space .footer {
-	position: fixed;
-	top: 92vh;
-	height:75px;
-	display: inline-block;
-}
-
 .button-div {
-	padding-top: 6vh;
+	padding-top: 4vh;
 	padding-bottom: 1vh;
 	position: relative;
 	display: inline-block;
+	margin-bottom: 50px;
 }

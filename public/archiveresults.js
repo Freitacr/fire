@@ -1,59 +1,5 @@
 let queryResultsTableInitialHtml = undefined;
 
-function retrieveComplaintGroupResults(loginCookie) {
-    let cookieStr = decodeURIComponent(document.cookie);
-    let reqBody = undefined;
-    cookieStr.split(';').forEach(function(cookie) {
-        if(cookie.trim().startsWith("OMISA_WEB_COOKIE"))
-            reqBody = cookie.split('=')[1];
-    })
-    if(reqBody == undefined) {
-        window.location.replace("newaquery.html");
-        return;
-    }
-    let bodyObj = JSON.parse(reqBody);
-
-    let reqObj = {
-        Entry: {
-            Make: bodyObj.make.toLowerCase(),
-            Model: bodyObj.model.toLowerCase(),
-            Problem: bodyObj.problem.toLowerCase()
-        },
-        UserId: loginCookie.userId,
-        LoginToken: loginCookie.token,
-        CompanyId: parseInt(bodyObj.companyId)
-    };
-
-    let fetchInit = {
-        method: "PUT",
-        body: JSON.stringify(reqObj)
-    };
-    fetch("https://jcf-ai.com:16384/archive", fetchInit).then(response=> {
-        if(response.status == 200) {
-            response.text().then(value=> {
-                let complaintGroupTable = document.getElementById('problem-group-table');
-                let respJson = JSON.parse(value);
-                respJson.forEach(complaintGroupJson => {
-                    complaintGroupTable.innerHTML += convertProblemGroup(complaintGroupJson);
-                });
-                complaintGroupTable.addEventListener("click", function(e) { handleProblemGroupTableClick(e, loginCookie)});
-            })
-        } else {
-            response.text().then(value =>{
-                alert("Error occurred during retrieval of complaint groups: " + value);
-            })
-        }
-    })
-}
-
-function handleProblemGroupTableClick(e, loginCookie){
-    let id = e.target.id;
-    if(id == "" || id == "problem-group-table")
-        return;
-    let complaintGroupId = parseInt(id);
-    retrieveQueryResults(loginCookie, complaintGroupId);
-}
-
 function titleCase(string) {
     var sentence = string.toLowerCase().split(" ");
     for(var i = 0; i < sentence.length; i++){
@@ -62,15 +8,7 @@ function titleCase(string) {
     return sentence;
 }
 
-function convertProblemGroup(problemGroupJson) {
-    retStr = '<tr><td class="pgroup" id="%">';
-    retStr += titleCase(problemGroupJson.GroupDefinition);
-    retStr += '</td></tr>';
-    retStr = retStr.replace('%', problemGroupJson.Id.toString())
-    return retStr;
-}
-
-function retrieveQueryResults(loginCookie, problemGroupId) {
+function retrieveQueryResults(loginCookie) {
     let table = document.getElementById("table-main");
     let uploadLink = document.getElementById("link");
     if(queryResultsTableInitialHtml == undefined) {
@@ -93,18 +31,23 @@ function retrieveQueryResults(loginCookie, problemGroupId) {
     let bodyObj = JSON.parse(reqBody);
 
     let reqObj = {
-        Entry: {
-            Make: bodyObj.make.toLowerCase(),
-            Model: bodyObj.model.toLowerCase(),
-            Problem: bodyObj.problem.toLowerCase()
-        },
+        Entry: {},
         UserId: loginCookie.userId,
         LoginToken: loginCookie.token,
-        CompanyId: parseInt(bodyObj.companyId),
-        ProblemGroupId: problemGroupId
+        CompanyId: parseInt(bodyObj.companyId)
     };
+    if(bodyObj.make != undefined)
+        reqObj.Entry.Make = bodyObj.make.toLowerCase();
+    if(bodyObj.model != undefined)
+        reqObj.Entry.Model = bodyObj.model.toLowerCase();
+    if(bodyObj.problem != undefined)
+        reqObj.Entry.Problem= bodyObj.problem.toLowerCase();
+    if(bodyObj.complaint != undefined)
+        reqObj.Entry.Complaint= bodyObj.complaint.toLowerCase();
+    if(bodyObj.year != undefined)
+        reqObj.Entry.Year = bodyObj.year; 
     let fetchInit = {
-        method: "POST",
+        method: "PUT",
         body: JSON.stringify(reqObj)
     };
     fetch("https://jcf-ai.com:16384/archive", fetchInit).then(response=>{
@@ -129,9 +72,8 @@ function convertSimilarQueryObject(queryObject) {
     retStr += "<td>" + titleCase(queryObject.Make) + "</td>";
     retStr += "<td>" + titleCase(queryObject.Model) + "</td>";
     retStr += "<td>" + queryObject.Year + "</td>";
-    retStr += "<td>" + queryObject.Problem + "</td>";
-    let similarity = 100-queryObject.Difference + "%";
-    retStr += "<td>" + similarity + "</td></tr>";
+    retStr += "<td>" + queryObject.Complaint + "</td>";
+    retStr += "<td>" + queryObject.Problem + "</td></tr>";
     return retStr;
 }
 
@@ -144,7 +86,7 @@ async function init() {
         alert("User was not logged in, redirecting");
         return;
     }
-    retrieveComplaintGroupResults(loginCookie);
+    retrieveQueryResults(loginCookie);
 }
 
 window.onload=init;
