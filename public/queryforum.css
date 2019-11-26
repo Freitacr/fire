@@ -1,0 +1,140 @@
+body {
+    background-color: aliceblue;
+}
+
+.sidebar-left {
+	display: block;
+	min-width: 200px;
+	left: 0vw;
+	height: 100%;
+	box-shadow: 0px 0px 8px 0px rgba(0,0,0,1);
+	background-color: white;
+	border-color: #aaaaaa;
+	margin: 0px;
+	z-index: 1;
+	position: fixed;
+}
+
+.sidebar-right {
+	display: block;
+	position: fixed;
+	background-color: white;
+	min-width: 200px;
+	height: 100%;
+	box-shadow: -2px 0px 8px -1px rgba(0,0,0,1);
+    margin: 0px 0px 0px calc(100vw - 200px);
+	z-index: 1;
+}
+
+.centre-stage {
+    position: relative;
+    margin: 0px;
+    width: 100%;
+    top: 6.1vh;
+    z-index: 0;
+    min-width: 1000px;
+    padding-top:10px;
+	background-color: aliceblue;
+}
+
+.centre-space {
+    position: relative;
+    left: 4px;
+    padding: 0px;
+    width: calc(100% - 377px);
+    margin: auto;
+}
+
+.entry {
+	background-color: burlywood;
+	border-color: steelblue;
+	border-width: 1px;
+	border-style: solid;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+.job h2 {
+	margin-top: 10px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+.entry ol {
+	list-style: none;
+}
+
+.job ol {
+	margin-top: 5px;
+	font-size: 14pt;
+}
+
+.job ol li b{
+	margin-right: 20px;
+}
+
+.requirements {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.req-link {
+	display: none;
+	margin-left: 20px;
+	color: blue;
+	text-decoration: underline;
+}
+
+.req-link:hover {
+	cursor: pointer;
+}
+
+.hide {
+	display:none;
+}
+
+.post h3 {
+	margin-left: 20px;
+}
+
+.post p {
+	font-size: 12pt;
+	margin-left: 20px;
+}
+
+.posting-entry {
+	background-color: burlywood;
+	border-color: steelblue;
+	border-width: 1px;
+	border-style: solid;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	width: 60%;
+	margin: auto auto 10px auto;
+}
+
+.posting-area {
+	width: 75%;
+	padding-top: 16px;
+	height: 200px;
+	margin: auto;
+}
+
+.posting-text-area {
+	width: 100%;
+	height: 83%;
+	resize: none;
+}
+
+.button-area {
+	position: relative;
+	margin: auto;
+	width: 77%;
+	top: -20px;
+}
+
+.post-button {
+	float: right;
+	width: 51%;
+	height: 25px;
+}

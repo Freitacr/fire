@@ -94,3 +94,7 @@ body {
 .pgroup:hover {
 	cursor: pointer;
 }
+
+.clickme td:hover {
+	cursor: pointer;
+}

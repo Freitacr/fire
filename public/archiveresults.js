@@ -8,6 +8,16 @@ function titleCase(string) {
     return sentence;
 }
 
+function retrieveArchiveCookie() {
+    let cookieStr = decodeURIComponent(document.cookie);
+    let reqBody = undefined;
+    cookieStr.split(';').forEach(function(cookie) {
+        if(cookie.trim().startsWith("OMISA_WEB_COOKIE"))
+            reqBody = cookie.split('=')[1];
+    })
+    return reqBody;
+}
+
 function retrieveQueryResults(loginCookie) {
     let table = document.getElementById("table-main");
     let uploadLink = document.getElementById("link");
@@ -18,12 +28,7 @@ function retrieveQueryResults(loginCookie) {
     }
     table.style.display = "table";
     uploadLink.style.display = "block";
-    let cookieStr = decodeURIComponent(document.cookie);
-    let reqBody = undefined;
-    cookieStr.split(';').forEach(function(cookie) {
-        if(cookie.trim().startsWith("OMISA_WEB_COOKIE"))
-            reqBody = cookie.split('=')[1];
-    })
+    let reqBody = retrieveArchiveCookie();
     if(reqBody == undefined) {
         window.location.replace("newaquery.html");
         return;
@@ -58,6 +63,7 @@ function retrieveQueryResults(loginCookie) {
                     let objStr = convertSimilarQueryObject(queryObject);
                     table.innerHTML += objStr;
                 })
+                table.addEventListener("click", handleTableClick);
             })
         } else {
             response.text().then(value =>{
@@ -68,13 +74,29 @@ function retrieveQueryResults(loginCookie) {
 }
 
 function convertSimilarQueryObject(queryObject) {
-    let retStr = "<tr>";
-    retStr += "<td>" + titleCase(queryObject.Make) + "</td>";
-    retStr += "<td>" + titleCase(queryObject.Model) + "</td>";
-    retStr += "<td>" + queryObject.Year + "</td>";
-    retStr += "<td>" + queryObject.Complaint + "</td>";
-    retStr += "<td>" + queryObject.Problem + "</td></tr>";
+    let retStr = '<tr class="clickme">';
+    retStr += ('<td id="%">' + titleCase(queryObject.Make) + "</td>").replace('%', queryObject.Id.toString());
+    retStr += ('<td id="%">' + titleCase(queryObject.Model) + "</td>").replace('%', queryObject.Id.toString());
+    retStr += ('<td id="%">' + queryObject.Year + "</td>").replace('%', queryObject.Id.toString());
+    retStr += ('<td id="%">' + queryObject.Complaint + "</td>").replace('%', queryObject.Id.toString());
+    retStr += ('<td id="%">' + queryObject.Problem + "</td></tr>").replace('%', queryObject.Id.toString());
     return retStr;
+}
+
+function constructForumCookie(id){
+    let d = new Date();
+    d.setTime(d.getTime() + (7 * 1000 * 60 * 60 * 24));
+    let archiveCookie = JSON.parse(retrieveArchiveCookie());
+    let cookieStr = 'OMISF_WEB_COOKIE={"id":'+id+',"companyId":'+parseInt(archiveCookie.companyId)+'}';
+    document.cookie = cookieStr + ";expires="+d.toUTCString()+";path=/;";
+}
+
+function handleTableClick(e) {
+    let id = e.target.id;
+    if(id == "" || id == "table-main")
+        return;
+    constructForumCookie(id);
+    window.location.href = "queryforum.html";
 }
 
 async function init() {

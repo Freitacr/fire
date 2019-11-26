@@ -37,6 +37,8 @@ function retrieveComplaintGroupResults(loginCookie) {
                     complaintGroupTable.innerHTML += convertComplaintGroup(complaintGroupJson);
                 });
                 complaintGroupTable.addEventListener("click", function(e) { handleComplaintGroupTableClick(e, loginCookie)});
+                let resultTable = document.getElementById("table-main");
+                resultTable.addEventListener("click", function(e) {handleTableClick(e)});
             })
         } else {
             response.text().then(value =>{
@@ -70,6 +72,16 @@ function convertComplaintGroup(complaintGroupJson) {
     return retStr;
 }
 
+function retrievePredictionCookie() {
+    let cookieStr = decodeURIComponent(document.cookie);
+    let reqBody = undefined;
+    cookieStr.split(';').forEach(function(cookie) {
+        if(cookie.trim().startsWith("OMISP_WEB_COOKIE"))
+            reqBody = cookie.split('=')[1];
+    })
+    return reqBody;
+}
+
 function retrieveQueryResults(loginCookie, complaintGroupId) {
     let table = document.getElementById("table-main");
     let uploadLink = document.getElementById("link");
@@ -80,12 +92,7 @@ function retrieveQueryResults(loginCookie, complaintGroupId) {
     }
     table.style.display = "table";
     uploadLink.style.display = "block";
-    let cookieStr = decodeURIComponent(document.cookie);
-    let reqBody = undefined;
-    cookieStr.split(';').forEach(function(cookie) {
-        if(cookie.trim().startsWith("OMISP_WEB_COOKIE"))
-            reqBody = cookie.split('=')[1];
-    })
+    let reqBody = retrievePredictionCookie();
     if(reqBody == undefined) {
         window.location.replace("newpquery.html");
         return;
@@ -124,14 +131,30 @@ function retrieveQueryResults(loginCookie, complaintGroupId) {
     })
 }
 
+function constructForumCookie(id){
+    let d = new Date();
+    d.setTime(d.getTime() + (7 * 1000 * 60 * 60 * 24));
+    let archiveCookie = JSON.parse(retrievePredictionCookie());
+    let cookieStr = 'OMISF_WEB_COOKIE={"id":'+id+',"companyId":'+parseInt(archiveCookie.companyId)+'}';
+    document.cookie = cookieStr + ";expires="+d.toUTCString()+";path=/;";
+}
+
+function handleTableClick(e) {
+    let id = e.target.id;
+    if(id == "" || id == "table-main")
+        return;
+    constructForumCookie(id);
+    window.location.href = "queryforum.html";
+}
+
 function convertSimilarQueryObject(queryObject) {
-    let retStr = "<tr>";
-    retStr += "<td>" + titleCase(queryObject.Make) + "</td>";
-    retStr += "<td>" + titleCase(queryObject.Model) + "</td>";
-    retStr += "<td>" + queryObject.Year + "</td>";
-    retStr += "<td>" + queryObject.Problem + "</td>";
+    let retStr = '<tr class="clickme">';
+    retStr += ('<td id="%">' + titleCase(queryObject.Make) + "</td>").replace('%', queryObject.Id.toString());
+    retStr += ('<td id="%">' + titleCase(queryObject.Model) + "</td>").replace('%', queryObject.Id.toString());
+    retStr += ('<td id="%">' + queryObject.Year + "</td>").replace('%', queryObject.Id.toString());
+    retStr += ('<td id="%">' + queryObject.Problem + "</td>").replace('%', queryObject.Id.toString());
     let similarity = 100-queryObject.Difference + "%";
-    retStr += "<td>" + similarity + "</td></tr>";
+    retStr += ('<td id="%">' + similarity + "</td></tr>").replace('%', queryObject.Id.toString());
     return retStr;
 }
 

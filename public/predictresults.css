@@ -94,3 +94,7 @@ body {
 .cgroup:hover {
 	cursor: pointer;
 }
+
+.clickme td:hover {
+	cursor: pointer;
+}
