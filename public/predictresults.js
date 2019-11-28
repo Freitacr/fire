@@ -85,6 +85,7 @@ function retrievePredictionCookie() {
 function retrieveQueryResults(loginCookie, complaintGroupId) {
     let table = document.getElementById("table-main");
     let uploadLink = document.getElementById("link");
+    let clickExplanation = document.getElementById("hide-span")
     if(queryResultsTableInitialHtml == undefined) {
         queryResultsTableInitialHtml = table.innerHTML;
     } else {
@@ -92,6 +93,7 @@ function retrieveQueryResults(loginCookie, complaintGroupId) {
     }
     table.style.display = "table";
     uploadLink.style.display = "block";
+    clickExplanation.style.display= "inline-block";
     let reqBody = retrievePredictionCookie();
     if(reqBody == undefined) {
         window.location.replace("newpquery.html");

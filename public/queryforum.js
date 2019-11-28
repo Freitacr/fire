@@ -152,7 +152,7 @@ function convertRepairJobEntry(repairJobEntry) {
 }
 
 function convertJob(make, model, year, complaint, problem) {
-    let retStr = '<section class="job entry"><h2>Repair Job Data:</h2><ol><li><b>Make:</b>';
+    let retStr = '<section class="job entry"><h2>Repair Job Data</h2><ol><li><b>Make:</b>';
     retStr += make + "</li><li><b>Model:</b>";
     retStr += model + "</li><li><b>Year:</b>";
     retStr += year + "</li><li><b>Complaint:</b>";

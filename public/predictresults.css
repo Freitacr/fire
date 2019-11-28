@@ -98,3 +98,12 @@ body {
 .clickme td:hover {
 	cursor: pointer;
 }
+
+.click-exp {
+	display: block;
+	text-align: center;
+}
+
+.hide {
+	display: none;
+}

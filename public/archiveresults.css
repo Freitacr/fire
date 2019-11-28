@@ -98,3 +98,12 @@ body {
 .clickme td:hover {
 	cursor: pointer;
 }
+
+.click-exp {
+	margin-bottom: 10px;
+	display: inline-block;
+}
+
+.footer-spacer h2{
+	text-align: center;
+}
